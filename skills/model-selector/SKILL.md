@@ -45,7 +45,7 @@ Prefer direct workload measurements, then close independent proxies, then distan
 
 ## 3. Compare configurations under three objectives
 
-Read [reasoning-and-cost.md](references/reasoning-and-cost.md). Verify every recommended setting on the actual surface. Keep benchmark settings distinct from recommended settings; results at one effort do not establish results at another. If no control is exposed, use documented automatic behavior, or mark it unverified.
+Read [reasoning-and-cost.md](references/reasoning-and-cost.md) and [ranking-evidence.md](references/ranking-evidence.md). Build the evidence comparison before choosing finalists or assigning places; the user-facing answer still starts with the top three. Verify every recommended setting on the actual surface. Keep benchmark settings distinct from recommended settings; results at one effort do not establish results at another. If no control is exposed, use documented automatic behavior, or mark it unverified.
 
 Apply hard constraints first. Produce these three outputs unless the user explicitly narrows the request:
 
@@ -57,11 +57,11 @@ Apply hard constraints first. Produce these three outputs unless the user explic
 
 Use three distinct models within each top-three list when evidence supports three. The same model may appear in both lists and be the cheapest adequate choice, possibly at different supported settings. Seven unique models are not required. A model at several effort levels is still one model. If fewer qualify, list fewer and explain; when no floor is evidenced, keep value candidates explicitly provisional rather than declaring them adequate.
 
-Choose a leader separately for each objective; there is no required overall or main-model winner. Explain value through the observed quality gains, full cost and correction burden without asking the user which objective matters most or what justifies paying more. “Value” is not an arbitrary benchmark-score/price ratio: use such a ratio only if the metric has a meaningful cardinal interpretation for this task and costs are comparable. Avoid averaging unrelated percentages or inventing weights. Explain ties, conflicts and uncertainty; call an unsupported ordering an order to test, not a proven ranking. If unknown candidates could change a winner, state that coverage limit.
+Choose a leader separately for each objective when evidence supports one; there is no required overall or main-model winner. Explain value through the observed quality gains, full cost and correction burden without asking the user which objective matters most or what justifies paying more. “Value” is not an arbitrary benchmark-score/price ratio: use such a ratio only if the metric has a meaningful cardinal interpretation for this task and costs are comparable. Avoid averaging unrelated percentages or inventing weights. Use an unordered shortlist or supported ties when relative positions are unresolved. A “preliminary” label does not justify unsupported places. If unknown candidates could change a winner, state that coverage limit.
 
 For multi-stage work, consider routing only when gains justify handoffs, verification and failure complexity; retain a single-model baseline. Advice does not change the user's active model or settings.
 
-**Done when:** the three objectives are answered or explicitly unresolved, every proposed configuration is supported, and adequacy is separated from mere plausibility.
+**Done when:** the three objectives are answered or explicitly unresolved; each place and consequential exclusion passes the ranking-evidence checks; recommended configurations, tested systems and adequacy claims match their evidence.
 
 ## 4. Deliver a usable recommendation
 

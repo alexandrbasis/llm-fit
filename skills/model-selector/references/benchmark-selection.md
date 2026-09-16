@@ -28,7 +28,7 @@ For each evaluation used to rank candidates, inspect the current methodology plu
 1. **Identity:** owner, exact name/version/split, source links, publication/evaluation date and access date; maintained successor if any.
 2. **Construct:** what the test intends to measure; domain, language, modality, task examples, input sizes and task duration/complexity.
 3. **Metric:** actual scoring rule, denominator, direction, aggregation, partial credit, error/abstention handling, constraint violations and distinction between repeated attempts and reliable single-run success.
-4. **Environment:** model snapshots, provider, thinking settings, prompts, tools/harness, retrieval/access, budgets, time limits and safeguards.
+4. **Environment:** model snapshots, provider, thinking settings, prompts, tools/harness, retrieval/access, budgets, time limits and safeguards. Identify any fallback, router or helper model contributing to task completion separately from models used only as judges.
 5. **Evidence quality:** sample count, repeats, uncertainty, coverage of current candidates, saturation and disclosed contamination or tuning. Note evaluator/provider involvement without assuming bias from missing scores.
 6. **Economics:** what cost and time include; measured wall time versus estimates or token counts; failures, tools, retries and concurrency.
 7. **Task mapping:** exact user requirement supported, matching slice, important mismatch, and whether the result can discriminate finalists or only check a minimum.
