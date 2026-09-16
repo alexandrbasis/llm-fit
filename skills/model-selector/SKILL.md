@@ -65,16 +65,12 @@ For multi-stage work, consider routing only when gains justify handoffs, verific
 
 ## 4. Deliver a usable recommendation
 
-Lead with a concise result for each objective, including the verified setting and main reason, or its unresolved evidence gap. Include the date checked and confidence. Briefly state the task, acceptance floor and assumptions. Then present:
+Read and follow [output-contract.md](references/output-contract.md) before drafting the final answer. Use exactly four blocks, in this order: **top three models with reasoning and why; task-matched benchmarks; a benchmark-results matrix for those models with interpretation; cost efficiency**. Put the value ranking and cheapest adequate option inside the fourth block. Start with the model table, not a narrative recommendation or a restatement of the user's profile.
 
-1. **Top 3 — quality.** `Rank | Model + surface | Reasoning and why | Task-quality evidence | Cost/time | Limitation`
-2. **Top 3 — value.** `Rank | Model + surface | Reasoning | Why this tradeoff | Full-cost basis | Quality concession / evidence gap`
-3. **Cheapest adequate.** Model/configuration, evidence of adequacy, cost assumptions, what is sacrificed and when to escalate. If unverified, label it “cheapest candidate to test,” with the missing check.
+Keep research detail in the working ledger. Show only decision-relevant evidence, settings, numbers, short interpretations and nearby source links. Use one shared date/evidence-status line; place any limitation next to the result it qualifies. Avoid repeated winners, generic caveats and a concluding recommendation that changes the opening ranking.
 
-Reuse shared facts when models overlap. Explain the decisive benchmark choices and direct-versus-proxy evidence with links near the claims. State why another option could win. For a stack, add stage → model/setting → escalation condition without replacing the three outputs.
-
-Finish with a small validation recipe from [validation.md](references/validation.md), using real representative tasks. Say whether tests were run. Separate measured, estimated and unknown cost/speed; API prices, subscription quotas and local infrastructure are different cost bases. Detailed calculations or API snippets are optional when needed to act.
+Read [validation.md](references/validation.md) when a trial is requested or necessary to resolve a decision. By default, an unverified choice gets one concrete check in the relevant block, not a separate test plan. Expand only when the user asks or when a material limitation cannot be explained briefly. If a stack is requested, put its stage mapping inside the relevant block.
 
 This skill authorizes advice and read-only research. Paid experiments, private-data uploads, deployment and configuration changes require existing task authorization. Missing evidence calls for a concrete proportionate trial, not an unrequested evaluation project.
 
-**Complete when:** the user sees quality leaders, best-value choices and the cheapest evidenced adequate option (or the exact gap), with usable settings, fresh sources and a practical next step.
+**Complete when:** all four blocks are present, each recommended model has a reasoning setting and a task-specific reason, the matrix shows available scores and missing data, and cost efficiency identifies the value ranking and cheapest evidenced adequate option or the exact gap.

@@ -1,4 +1,4 @@
 interface:
   display_name: "Model Selector"
   short_description: "Модели по качеству, цене-качеству и достаточности"
-  default_prompt: "Use $model-selector to find the current top 3 models for quality, top 3 for value, and cheapest adequate option for my task, with verified reasoning settings."
+  default_prompt: "Use $model-selector for my task: top 3 models with reasoning and why, relevant benchmarks, a score comparison table, then cost efficiency with the value top 3 and cheapest adequate option."

@@ -2,13 +2,14 @@
 
 An agent skill for choosing AI models for a specific task using current evidence.
 
-It returns:
+It returns four compact blocks:
 
-- Up to three models for the strongest task quality.
-- Up to three models for the best value, considering completed work, cost and human corrections.
-- The cheapest option with evidence that it meets the task's acceptance criteria, or a clearly labeled candidate to test when evidence is missing.
+1. Top three models for task quality, each with a reasoning setting and a concrete reason.
+2. Benchmarks that fit the task, with an explanation of their relevance.
+3. A matrix of the models' benchmark results, measured settings and what the differences mean.
+4. Cost efficiency, including the value top three and the cheapest adequate option, or a clearly labeled candidate to test when evidence is missing.
 
-Each recommendation includes the access platform, a verified reasoning setting, the reason for choosing it, sources and uncertainty. The same model may appear in several categories.
+Each recommendation includes the access platform, verified settings, sources and relevant uncertainty. The same model may appear in several categories. The [output contract](skills/model-selector/references/output-contract.md) keeps the recommendation short and puts evidence next to the claims it supports.
 
 ## How it works
 
@@ -16,7 +17,7 @@ The skill asks for the task when none is supplied, then clarifies only missing t
 
 The package stores the selection method and links to source services. Model names, benchmark versions, rankings, pricing and supported-setting lists are researched during each run. Results from a previous selection do not become defaults.
 
-Public benchmarks are evidence to assess, not guarantees about a different workload. The skill explains transfer gaps and proposes a small check on representative tasks. Browsing is needed for a current recommendation. Without it, conclusions remain provisional.
+Public benchmarks are evidence to assess, not guarantees about a different workload. The skill explains transfer gaps briefly and names a concrete check when evidence is missing. Detailed test plans are optional. Browsing is needed for a current recommendation. Without it, conclusions remain provisional.
 
 ## Install in Codex
 
