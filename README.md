@@ -1,4 +1,4 @@
-# Model Selector
+# LLM Fit
 
 An agent skill for choosing AI models for a specific task using current evidence.
 
@@ -9,7 +9,7 @@ It returns four compact blocks:
 3. A matrix of the models' benchmark results, measured settings and what the differences mean.
 4. Cost efficiency, including the value top three and the cheapest adequate option, or a clearly labeled candidate to test when evidence is missing.
 
-Each recommendation includes the access platform, verified settings, sources and relevant uncertainty. The same model may appear in several categories. The [output contract](skills/model-selector/references/output-contract.md) keeps the recommendation short and puts evidence next to the claims it supports.
+Each recommendation includes the access platform, verified settings, sources and relevant uncertainty. The same model may appear in several categories. The [output contract](skills/llm-fit/references/output-contract.md) keeps the recommendation short and puts evidence next to the claims it supports.
 
 ## How it works
 
@@ -25,17 +25,17 @@ Ask Codex:
 
 ```text
 Use $skill-installer to install the skill from
-https://github.com/alexandrbasis/model-selector/tree/main/skills/model-selector
+https://github.com/alexandrbasis/llm-fit/tree/main/skills/llm-fit
 ```
 
-The skill directory is `skills/model-selector`. Installation includes its `references` and `agents` directories. For an existing installation, ask Codex to update it from this repository while preserving any local changes.
+The skill directory is `skills/llm-fit`. Installation includes its `references` and `agents` directories. For an existing installation, ask Codex to update it from this repository while preserving any local changes.
 
 For another agent that supports skills, install the complete directory in that agent's skill location. The instructions do not require a particular model provider or paid evaluation platform. `agents/openai.yaml` contains Codex interface metadata.
 
 ## Use
 
 ```text
-Use $model-selector to choose models for checking Russian product requirements.
+Use $llm-fit to choose models for checking Russian product requirements.
 Find omissions and contradictions while preserving every condition and exception.
 I will use an API and review the final output.
 Compare quality leaders, best-value choices, and the cheapest adequate option.
@@ -48,6 +48,6 @@ It provides advice and read-only research. Paid experiments, private-data upload
 
 ## Files and origin
 
-Start with [SKILL.md](skills/model-selector/SKILL.md). Supporting references cover the [interview](skills/model-selector/references/interview.md), [source entrypoints](skills/model-selector/references/source-map.md), [benchmark selection](skills/model-selector/references/benchmark-selection.md), [reasoning and cost](skills/model-selector/references/reasoning-and-cost.md), and [validation](skills/model-selector/references/validation.md).
+Start with [SKILL.md](skills/llm-fit/SKILL.md). Supporting references cover the [interview](skills/llm-fit/references/interview.md), [source entrypoints](skills/llm-fit/references/source-map.md), [benchmark selection](skills/llm-fit/references/benchmark-selection.md), [reasoning and cost](skills/llm-fit/references/reasoning-and-cost.md), and [validation](skills/llm-fit/references/validation.md).
 
-The workflow was inspired by [IndyDevDan's video about selecting agent benchmarks](https://www.youtube.com/watch?v=9weiIHy9T_0). Its [origin note](skills/model-selector/references/video-origin.md) distinguishes the video's ideas from this skill's additions. No ranking from the video is inherited, and this project is not affiliated with the author or the linked evaluation services.
+The workflow was inspired by [IndyDevDan's video about selecting agent benchmarks](https://www.youtube.com/watch?v=9weiIHy9T_0). Its [origin note](skills/llm-fit/references/video-origin.md) distinguishes the video's ideas from this skill's additions. No ranking from the video is inherited, and this project is not affiliated with the author or the linked evaluation services.

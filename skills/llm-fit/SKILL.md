@@ -1,9 +1,9 @@
 ---
-name: model-selector
+name: llm-fit
 description: Select AI models for a specific task using current sources. Recommend top three for quality, top three for value, and the cheapest adequate option, with verified reasoning settings. Use for model recommendations and workload-to-model matching across apps, APIs, and local deployment.
 ---
 
-# Model Selector
+# LLM Fit
 
 Recommend **model + supported reasoning configuration + delivery surface** in the user's language. Always cover quality, value and cheapest adequate as separate objectives unless the user explicitly narrows the request. These are outputs to provide, not options for the user to choose before research. Reasoning means both the actual thinking setting and a concise explanation of the choice, never hidden chain of thought. Cover general work: writing, research, coding, analysis, documents, multimodal tasks and agents.
 

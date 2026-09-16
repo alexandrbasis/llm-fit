@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Fit"
+  short_description: "Модели по качеству, цене-качеству и достаточности"
+  default_prompt: "Use $llm-fit for my task: top 3 models with reasoning and why, relevant benchmarks, a score comparison table, then cost efficiency with the value top 3 and cheapest adequate option."
