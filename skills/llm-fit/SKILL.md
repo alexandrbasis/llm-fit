@@ -31,17 +31,17 @@ If no task exists, ask for one concrete example and expected result before ranki
 
 Read [source-map.md](references/source-map.md) for entrypoints and [benchmark-selection.md](references/benchmark-selection.md) for matching current benchmarks to this task. Choose a small set of important capabilities, usually two to four. Discover current evaluations for these capabilities, then read each selected evaluation's current methodology and task examples before trusting its leaderboard. Explain the mapping: task requirement → measured capability → benchmark/slice → transfer limitation.
 
-Research current model catalogs and prices alongside evaluations. Include plausible quality leaders, efficient candidates and specialists within the user's deployment boundaries; do not require provider diversity. Start with a manageable pool, usually five to eight models across both objectives, and expand if evidence or budget options are weak. Do not restrict discovery to the models ranked in the video or covered by one leaderboard. Stop when each objective has credible contenders, meaningful lower-cost alternatives have been considered, and remaining gaps are explicit.
+Before narrowing candidates, apply [discovery-coverage.md](references/discovery-coverage.md): establish the allowed market scope, cross-check broad current catalogs and task-specific evidence, and account for every model or family the user names. Research prices alongside evaluations. A manageable comparison pool, usually five to eight models, follows this discovery pass; it is not a limit on which families to investigate. Expand it when a credible challenger or coverage gap could change any objective. Finalists need no provider-diversity quota.
 
 Verify exact names/snapshots, availability, capabilities, settings and commercial terms against official documentation. Benchmark owners are authoritative about their own measurements; label provider self-reports. Read sources before citing them, and record access date separately from publication/evaluation date.
 
 Keep a compact working ledger:
 
-`model/version | provider/surface | reasoning/configuration | constraint fit | benchmark card + task evidence/URL | quality | cost/time basis | dates | gaps`
+`model/version + owner | provider/surface | discovery source + considered/excluded/unresolved reason | reasoning/configuration | constraint fit | benchmark card + task evidence/URL | quality | cost/time basis | dates | gaps`
 
 Prefer direct workload measurements, then close independent proxies, then distant benchmarks and labeled claims. Missing scores mean unknown. A new model needs its own evidence; a predecessor's score does not transfer automatically. Without live access, say the current market cannot be verified and use any dated evidence only provisionally.
 
-**Done when:** selected benchmarks have understood methods and task fit, and plausible candidates for both quality and economy have dated evidence or explicit gaps.
+**Done when:** the discovery-coverage checks pass or the scope is explicitly partial; every user-named candidate has a disposition; selected benchmarks have understood methods and task fit; plausible quality and economy contenders have dated evidence or explicit gaps.
 
 ## 3. Compare configurations under three objectives
 

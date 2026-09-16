@@ -16,7 +16,7 @@ Keep each reason to one sentence linking a task requirement to evidence or an ex
 
 If the control is documented as automatic or absent, say so. If the setting is unknown, mark it unverified instead of inventing one. When fewer than three models qualify, provide those and one short reason for the shortfall. Label a proposed setting without adequate outcome evidence as a configuration to test. “Preliminary” qualifies a supported conditional ranking; it cannot substitute for its basis.
 
-Directly below the table, include one short line with the check date and evidence status, for example whether this is a public-evidence comparison or includes real task measurements. Mention only assumptions that could change the selection. Do not repeat the user's job description.
+Directly below the table, include one short line with the check date and evidence status, for example whether this is a public-evidence comparison or includes real task measurements. Include a material market-scope restriction or discovery gap here; avoid implying a market-wide comparison when only one ecosystem was checked. Mention only assumptions that could change the selection. Do not repeat the user's job description.
 
 ## 2. Benchmarks that fit this task
 
@@ -39,6 +39,8 @@ Populate the cells with verified results, units and the measured reasoning setti
 Use “not published” or “not verified” for missing scores, never zero. Show dates/versions or environment differences where needed to avoid a false comparison. If rows are incomparable, state that in the interpretation column instead of numerically ranking them. Explain the metric's meaning and direction briefly: a rating, success rate and partial rubric score are different quantities. Do not average different rows into an invented total.
 
 Interpret each row in one short sentence: who has the stronger relevant evidence, whether the gap is meaningful, and what it supports in the task. Distinguish a supported tie from unknown relative performance. If evidence does not explain the order in block 1, repair the ordering or leave it unresolved. Put any material task-emphasis assumption next to the affected selection. Do not repeat the whole table in paragraphs.
+
+Account briefly for user-named candidates absent from the tables: why they were excluded or what remains unverified. Put quality/identity reasons here and cost/availability reasons in block 4; each requested item needs only one disposition. Do not add a separate market survey or full discovery log.
 
 ## 4. Cost efficiency
 
@@ -63,6 +65,7 @@ This final line completes the answer. A detailed validation plan, routing design
 - Four blocks in order; no repeated opening or closing winner.
 - Every recommended model has an exact supported setting, documented automatic behavior or an explicit verification gap, plus a concrete reason.
 - Each numbered place and consequential exclusion is supported; unresolved ordering stays unresolved even when a general caveat is present.
+- Discovery covers the permitted market scope; each user-named candidate is accounted for, and any material coverage limit is visible without implying inferiority from missing scores.
 - Benchmark choice follows the task; numbers are sourced and tied to the exact tested configuration and system. Task emphasis follows the request or is explicitly conditional.
 - Cost uses comparable units; each value position has a quality/cost basis, and missing adequacy is visible where it matters.
 - Tables render as Markdown, not code blocks. Each column has its own nonempty header cell, followed immediately by one separator row with the same cell count. Every data row matches that count; escape literal pipes inside cells. Keep cells short, put blank lines around tables, and inspect the rendered table when a preview is available.
