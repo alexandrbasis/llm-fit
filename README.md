@@ -12,7 +12,7 @@ Each recommendation includes the access platform, a verified reasoning setting, 
 
 ## How it works
 
-The skill asks for the task when none is supplied, then asks only questions that can change the choice. It identifies relevant capabilities, discovers current benchmarks, reads their methods and task examples, and checks current model catalogs, settings and prices.
+The skill asks for the task when none is supplied, then clarifies only missing task details, acceptance criteria and operational constraints. It compares all three objectives without asking the user to choose between quality, balance and minimum cost. It identifies relevant capabilities, discovers current benchmarks, reads their methods and task examples, and checks current model catalogs, settings and prices.
 
 The package stores the selection method and links to source services. Model names, benchmark versions, rankings, pricing and supported-setting lists are researched during each run. Results from a previous selection do not become defaults.
 

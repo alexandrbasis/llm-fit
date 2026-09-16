@@ -5,7 +5,7 @@ description: Select AI models for a specific task using current sources. Recomme
 
 # Model Selector
 
-Recommend **model + supported reasoning configuration + delivery surface** in the user's language. Reasoning means both the actual thinking setting and a concise explanation of the choice, never hidden chain of thought. Cover general work: writing, research, coding, analysis, documents, multimodal tasks and agents.
+Recommend **model + supported reasoning configuration + delivery surface** in the user's language. Always cover quality, value and cheapest adequate as separate objectives unless the user explicitly narrows the request. These are outputs to provide, not options for the user to choose before research. Reasoning means both the actual thinking setting and a concise explanation of the choice, never hidden chain of thought. Cover general work: writing, research, coding, analysis, documents, multimodal tasks and agents.
 
 ## Knowledge boundaries
 
@@ -23,7 +23,7 @@ Extract the job as input → work → deliverable → observable success. Identi
 
 Define both **best possible quality** for this task and **minimum acceptable quality**: required content/behavior, unacceptable errors, tolerable corrections, and when clarification or abstention is acceptable. The cheapest adequate choice depends on this floor; never invent a universal passing percentage. Distinguish a spending ceiling from a preferred target cost.
 
-If no task exists, ask for one concrete example and expected result before ranking. Otherwise use [interview.md](references/interview.md) only for unanswered questions that could change feasibility, ranking or effort; batch at most three short questions. Let users describe work, not name benchmarks. Reuse context and state low-impact assumptions. If a missing constraint could invalidate the result, resolve it or keep the affected recommendation conditional. A user declining more questions gets a provisional answer with assumptions.
+If no task exists, ask for one concrete example and expected result before ranking. Otherwise use [interview.md](references/interview.md) only for missing task details, acceptance criteria or operational constraints that could change feasibility, ranking or effort; batch at most three short questions. Do not ask the user to prioritize quality, balance, speed or price, or choose a main-model objective: compare all three objectives directly. Let users describe work, not name benchmarks. Reuse context and state low-impact assumptions. If a missing constraint could invalidate the result, resolve it or keep the affected recommendation conditional. A user declining more questions gets a provisional answer with assumptions.
 
 **Done when:** the task, hard constraints, ideal quality, and acceptance floor are clear enough to compare, or the unresolved points are explicitly conditional.
 
@@ -57,7 +57,7 @@ Apply hard constraints first. Produce these three outputs unless the user explic
 
 Use three distinct models within each top-three list when evidence supports three. The same model may appear in both lists and be the cheapest adequate choice, possibly at different supported settings. Seven unique models are not required. A model at several effort levels is still one model. If fewer qualify, list fewer and explain; when no floor is evidenced, keep value candidates explicitly provisional rather than declaring them adequate.
 
-Use the user's priorities to choose one overall starting recommendation from these comparisons. “Value” is not an arbitrary benchmark-score/price ratio: use such a ratio only if the metric has a meaningful cardinal interpretation for this task and costs are comparable. Avoid averaging unrelated percentages or inventing weights. Explain ties, conflicts and uncertainty; call an unsupported ordering an order to test, not a proven ranking. If unknown candidates could change a winner, state that coverage limit.
+Choose a leader separately for each objective; there is no required overall or main-model winner. Explain value through the observed quality gains, full cost and correction burden without asking the user which objective matters most or what justifies paying more. “Value” is not an arbitrary benchmark-score/price ratio: use such a ratio only if the metric has a meaningful cardinal interpretation for this task and costs are comparable. Avoid averaging unrelated percentages or inventing weights. Explain ties, conflicts and uncertainty; call an unsupported ordering an order to test, not a proven ranking. If unknown candidates could change a winner, state that coverage limit.
 
 For multi-stage work, consider routing only when gains justify handoffs, verification and failure complexity; retain a single-model baseline. Advice does not change the user's active model or settings.
 
@@ -65,7 +65,7 @@ For multi-stage work, consider routing only when gains justify handoffs, verific
 
 ## 4. Deliver a usable recommendation
 
-Lead with the overall starting choice, verified setting, main reason, date checked and confidence. Briefly state the task, acceptance floor and assumptions. Then present:
+Lead with a concise result for each objective, including the verified setting and main reason, or its unresolved evidence gap. Include the date checked and confidence. Briefly state the task, acceptance floor and assumptions. Then present:
 
 1. **Top 3 — quality.** `Rank | Model + surface | Reasoning and why | Task-quality evidence | Cost/time | Limitation`
 2. **Top 3 — value.** `Rank | Model + surface | Reasoning | Why this tradeoff | Full-cost basis | Quality concession / evidence gap`
